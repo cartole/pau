@@ -1,0 +1,130 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffc0cb, #ffe4e1);
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff8f8;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+}
+
+h1 {
+  color: #d6336c;
+}
+
+.message-box {
+  background-color: #ffe6f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+.hidden {
+  display: none;
+  margin-top: 20px;
+  color: #4a148c;
+  font-weight: bold;
+}
+
+.countdown {
+  margin-top: 30px;
+  font-size: 18px;
+}
+.exam-letter {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  background-color: #ffe4e1;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+  transform: scale(1.05);
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 90px solid #ffc0cb;
+  border-radius: 8px 8px 0 0;
+  z-index: 1; /* Está por encima */
+  transition: transform 0.5s ease-in-out;
+  transform-origin: top;
+}
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.letter {
+  position: relative;
+  z-index: 2; /* Por encima del flap */
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.click-hint {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#letter-text {
+  margin-top: 15px;
+  color: #4a148c;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+.letter-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+  background-color: #fff0f5;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.letter-text.open {
+  max-height: 2000px; /* Ajusta según longitud del texto */
+  padding: 20px;
+}
